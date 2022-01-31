@@ -1,10 +1,11 @@
 package firstlaba;
 
-public abstract class Train {
 
-    public Train(String time, String date){
+public class Train {
+
+    public Train(String time){
         this.setTime(time);
-        this.setDate(date);
+//        this.setDate(date);
     }
 
     private String time;
@@ -17,22 +18,21 @@ public abstract class Train {
         this.time = time;
     }
 
-
-
-    private String date;
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
+//
+//
+//    private String date;
+//
+//    public String getDate() {
+//        return date;
+//    }
+//
+//    public void setDate(String date) {
+//        this.date = date;
+//    }
 
     @Override
     public String toString(){
-
-        return "Время " + this.getTime() + "Дата" + this.getDate();
+        return "Ваше время " + this.getTime();
     }
 
 }

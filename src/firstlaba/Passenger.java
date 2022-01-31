@@ -11,14 +11,5 @@ public class Passenger extends Person {
         return "Пассажир " + super.getName();
     }
 
-    private Train train;
-
-    public Train getTrain(){
-        return getTrain();
-    }
-
-    public void setTrain(Train train){
-        this.train = train;
-    }
 
 }
