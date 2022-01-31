@@ -57,7 +57,10 @@ public class Main {
                     System.out.println("Введите время пездки\nПример - 01:01");
                     scanner.next();
                     String time = scanner.nextLine();
+                    for(int per = 0; per < timeTrain.size(); i++)
+                    for(int i = 0; i < 5; i++){
 
+                    }
                 }
                 break;
 
