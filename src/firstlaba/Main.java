@@ -1,10 +1,13 @@
 package firstlaba;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+
+
 
     public static void main(String[] args){
 
@@ -57,8 +60,17 @@ public class Main {
                     System.out.println("Введите время пездки\nПример - 01:01");
                     scanner.next();
                     String time = scanner.nextLine();
-                    for(int per = 0; per < timeTrain.size(); i++)
-                    for(int i = 0; i < 5; i++){
+                    String getTime;
+                    for(int var = 0; var < timeTrain.size(); var++) {
+                        for (int i = 0; i < 5; i++) {
+                            getTime = timeTrain.get(var);
+                            char qwe = getTime.charAt(i);
+                            String charToString = Character.toString(qwe);
+                            if(!charToString.equals(":")){
+                                String asd = "";
+                                asd += charToString;
+                            }
+                        }
 
                     }
                 }
