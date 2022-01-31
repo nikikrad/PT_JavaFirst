@@ -59,21 +59,35 @@ public class Main {
                     String date = scanner.nextLine();
                     System.out.println("Введите время пездки\nПример - 01:01");
                     scanner.next();
-                    String time = scanner.nextLine();
-                    String getTime;
-                    for(int var = 0; var < timeTrain.size(); var++) {
-                        for (int i = 0; i < 5; i++) {
-                            getTime = timeTrain.get(var);
-                            char qwe = getTime.charAt(i);
-                            String charToString = Character.toString(qwe);
-                            if(!charToString.equals(":")){
-                                String asd = "";
-                                asd += charToString;
-                            }
-                        }
+                    String  time = scanner.nextLine();
 
+//                    Time time1 = Time.valueOf("12:30:30");
+//                    Time time2 = Time.valueOf("11:30:00");
+//                    System.out.println(time1.after(time2));
+//                    Time qwe = time;
+//
+                    for(int i = 0; stations.size() > i; i++){
+                        if(stations.get(i) <= time){
+                            ArrayList<String> varTime = new ArrayList<String>();
+
+                            System.out.println(varTime.add(time));
+                        }
                     }
-                }
+
+//                    String getTime = "";
+//                    for(int var = 0; var < timeTrain.size(); var++) {
+//                        for (int i = 0; i < 5; i++) {
+//                            getTime = timeTrain.get(var);
+//                            char qwe = getTime.charAt(i);
+//                            String charToString = Character.toString(qwe);
+//                            if(!charToString.equals(":")){
+//                                String asd = "";
+//                                asd += charToString;
+//                            }
+//                        }
+//
+//                    }
+//                }
                 break;
 
                 case (2): {
