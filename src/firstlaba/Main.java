@@ -3,6 +3,7 @@ package firstlaba;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -19,6 +20,14 @@ public class Main {
         stations.add("Минск");
         stations.add("Жлобин");
         stations.add("Борисов");
+
+        Random random = new Random();
+        ArrayList<Integer> prise = new ArrayList<>();
+        prise.add(random.nextInt(4) + 6);
+        prise.add(random.nextInt(4) + 10);
+        prise.add(random.nextInt(4) + 3);
+        prise.add(random.nextInt(4) + 9);
+
 
         Train train =new Train("01:30") {
             @Override
@@ -116,11 +125,14 @@ public class Main {
                     }
                     System.out.println(person + " выберите время:");
                     for (int i = 0; i < varTime.size(); i++){
-                        System.out.println(timeTrain.get(varTime.get(i)));
+                        int q = i;
+                        System.out.println((q+1) + ". " + timeTrain.get(varTime.get(i)));
+                        q = 0;
                     }
                     int variable = scanner.nextInt();
                     variable--;
-                    System.out.println(person + " ваша станция назначения - " + stations.get(buf) + ". Дата отправления - " + date + ". Время отправления - " + timeTrain.get(varTime.get(variable)) + "\n");
+                    System.out.println(person + " ваша станция назначения - " + stations.get(buf) + ".\nДата отправления - " + date +
+                            ".\nВремя отправления - " + timeTrain.get(varTime.get(variable)) + ". \nЦена поездки - " + prise.get(buf) + "р.\n");
                 }
                 break;
 
@@ -143,6 +155,14 @@ public class Main {
                             }
                         }break;
                         case 2: {
+                            System.out.println("Введите новую станцию: ");
+                            scanner.nextLine();
+                            stations.add(scanner.nextLine());
+                            System.out.println("Введите минимальную цену: ");
+                            int newPrise = scanner.nextInt();
+                            prise.add(random.nextInt(4) + newPrise);
+                            System.out.println("Новая станция успешно добавлена!");
+
                         }
                     }
                 }
