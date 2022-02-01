@@ -15,14 +15,4 @@ public abstract class Person {
     public String getName(){
         return name;
     }
-
-    private Train train;
-
-    public Train getTrain(){
-        return getTrain();
-    }
-
-    public void setTrain(Train train){
-        this.train = train;
-    }
 }

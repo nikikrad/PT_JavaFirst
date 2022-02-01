@@ -55,9 +55,10 @@ public class Main {
                     }
                     System.out.println(passenger + "Выберите станцию назначения:");
                     int buf = scanner.nextInt();
+                    buf--;
                     System.out.println("Введите дату поездки\nПример - 01.01.2022");
-                    scanner.next();
                     String date = scanner.nextLine();
+                    date = scanner.nextLine();
                     System.out.println(date);
                     System.out.println("Введите время пездки\nПример - 01:01");
 //                    scanner.next();
@@ -115,8 +116,12 @@ public class Main {
                     }
                     System.out.println(person + " выберите время:");
                     for (int i = 0; i < varTime.size(); i++){
-
+                        System.out.println(timeTrain.get(varTime.get(i)));
                     }
+                    int variable = scanner.nextInt();
+                    variable--;
+                    System.out.println(person + " ваша станция назначения - " + stations.get(buf) + ". Дата отправления - " + date + ". Время отправления - " + timeTrain.get(varTime.get(variable)));
+                    isTrue = false;
                 }
                 break;
 
