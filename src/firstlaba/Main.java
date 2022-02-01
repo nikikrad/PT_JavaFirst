@@ -120,14 +120,31 @@ public class Main {
                     }
                     int variable = scanner.nextInt();
                     variable--;
-                    System.out.println(person + " ваша станция назначения - " + stations.get(buf) + ". Дата отправления - " + date + ". Время отправления - " + timeTrain.get(varTime.get(variable)));
-                    isTrue = false;
+                    System.out.println(person + " ваша станция назначения - " + stations.get(buf) + ". Дата отправления - " + date + ". Время отправления - " + timeTrain.get(varTime.get(variable)) + "\n");
                 }
                 break;
 
                 case (2): {
                     Administrator admin = new Administrator("Никита");
-
+                    System.out.println(admin + " выберите:");
+                    System.out.println("1. Посмотреть все станции");
+                    System.out.println("2. Добавить новую станцию");
+                    int buf = scanner.nextInt();
+                    switch (buf){
+                        case 1:{
+                            for (int y = 0; y < stations.size(); y++){
+                                System.out.println(stations.get(y));
+                            }
+                            System.out.println("Выберите станцию: ");
+                            int o = scanner.nextInt();
+                            System.out.println("Время:");
+                            for (int z = 0; z < timeTrain.size(); z++){
+                                System.out.println(timeTrain.get(z));
+                            }
+                        }break;
+                        case 2: {
+                        }
+                    }
                 }
                 break;
                 default: {
