@@ -86,13 +86,13 @@ public class Main {
                     int intTime = Integer.parseInt(mmm.trim());
 
 //                    Time time1 = Time.valueOf("12:30:30");
-//                    Time time2 = Time.valueOf("11:30:00");
-//                    System.out.println(time1.after(time2));
-//                    Time qwe = time;
-//
-//                    for(int i = 0; stations.size() > i; i++){
-//                        if(stations.get(i) <= time){
-//                            ArrayList<String> varTime = new ArrayList<String>();
+//                    Time time2 = Time.valueOf("11:30:           System.out.println(time1.after(time2));
+////                    Time qwe = time;
+////
+////                    for(int i = 0; stations.size() > i; i++){
+////                        if(stations.get(i) <= time){
+////                            ArrayList<String> varTime = new ArrayList<String>();
+////00");
 //
 //                            System.out.println(varTime.add(time));
 //                        }
@@ -138,7 +138,7 @@ public class Main {
 
                 case (2): {
                     Administrator admin = new Administrator("Никита");
-                    System.out.println(admin + " выберите:");
+                    System.out.println(admin.toString() + " выберите:");
                     System.out.println("1. Посмотреть все станции");
                     System.out.println("2. Добавить новую станцию");
                     int buf = scanner.nextInt();
