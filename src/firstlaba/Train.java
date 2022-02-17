@@ -1,14 +1,15 @@
 package firstlaba;
 
 
+import java.util.Objects;
+
 public class Train {
 
-    public Train(String time){
-        this.setTime(time);
-//        this.setDate(date);
-    }
-
     private String time;
+
+    public Train(String time) {
+        this.setTime(time);
+    }
 
     public String getTime() {
         return time;
@@ -18,21 +19,21 @@ public class Train {
         this.time = time;
     }
 
-//
-//
-//    private String date;
-//
-//    public String getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(String date) {
-//        this.date = date;
-//    }
-
     @Override
-    public String toString(){
-        return "Ваше время " + this.getTime();
+    public String toString() {
+        return this.getTime();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Train train = (Train) o;
+        return time.equals(train.time);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(time);
+    }
 }

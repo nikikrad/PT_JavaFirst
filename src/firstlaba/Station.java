@@ -4,19 +4,17 @@ import java.util.ArrayList;
 
 public class Station {
 
-    public Station(ArrayList<String > name){
-        this.setName(name);
+   private String name;
+
+    public String getName() {
+        return name;
     }
 
-    private ArrayList<String> name;
-    public ArrayList<String> stations = new ArrayList<>();
-
-    private void setName(ArrayList<String> name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public ArrayList<String> getName(){
-        return stations;
+    public Station(String name) {
+        this.name = name;
     }
-
 }
