@@ -11,14 +11,16 @@ public class Administrator extends Person {
         return "Администратор " + super.getName();
     }
 
-    private String name;
-
-    public void setName(String name){
-        this.name = name;
+    @Override
+    public String getName() {
+        return super.getName();
     }
 
-    public String getName(){
-        return name;
+    @Override
+    public void setName(String name) {
+        super.setName(name);
     }
+
+
 
 }

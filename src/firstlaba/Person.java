@@ -1,13 +1,13 @@
 package firstlaba;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
 
     public Person (String name){
         this.setName(name);
     }
-
     protected String name;
 
     public void setName(String name){

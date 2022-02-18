@@ -1,9 +1,10 @@
 package firstlaba;
 
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Train {
+public class Train implements Serializable {
 
     private String time;
 

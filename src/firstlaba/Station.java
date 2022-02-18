@@ -1,8 +1,9 @@
 package firstlaba;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Station {
+public class Station implements Serializable {
 
    private String name;
 
@@ -16,5 +17,10 @@ public class Station {
 
     public Station(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
